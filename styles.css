@@ -1,0 +1,89 @@
+/* Reset básico para margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container principal */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 16px;
+    padding: 16px;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+/* Estilo do cabeçalho */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Estilo do conteúdo principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+select, button {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo do rodapé */
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 16px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 414px) {
+    .container {
+        padding: 8px;
+    }
+
+    .header, .main-content, .footer {
+        padding: 12px;
+    }
+
+    select, button {
+        width: 100%;
+    }
+}
